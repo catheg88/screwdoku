@@ -1,4 +1,5 @@
 require_relative "tile"
+require 'byebug'
 
 class Board
   def self.empty_grid
@@ -27,8 +28,9 @@ class Board
   end
 
   def []=(pos, value)
+    # byebug
     x, y = pos
-    tile = grid[x][y]
+    tile = grid[x][y] #error line
     tile.value = value
   end
 
